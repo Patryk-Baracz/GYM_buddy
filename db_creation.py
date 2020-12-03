@@ -52,7 +52,7 @@ CREATE_EXERCISES_HISTORY_TABLE = """CREATE TABLE exercises_history(
     exercise_id INTEGER REFERENCES exercises(id) ON DELETE CASCADE,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     exercise_reps INTEGER,
-    weight_add DECIMAL(4,1),
+    weight_add DECIMAL(4,1) DEFAULT 0,
     total_weight DECIMAL(4,1),
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )"""
