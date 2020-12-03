@@ -1,0 +1,62 @@
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background: lightgrey;
+}
+
+section{
+    min-height:100%;
+    position: relative;
+}
+
+header {
+    background: black;
+    color: white;
+}
+
+ul {
+    margin: auto;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+    font-size: larger;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    padding-left: 20px;
+}
+
+footer{
+    background: black;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+p {
+    margin: 20px;
+    font-size: large;
+    line-height: 30px;
+}
+
+form#pomiar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+label {
+    margin: 10px;
+}
