@@ -8,6 +8,7 @@ body {
 section{
     min-height:100%;
     position: relative;
+    display: flex;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
     color: white;
 }
 
-ul {
+ul.menu {
     margin: auto;
     padding: 20px;
     list-style-type: none;
@@ -23,7 +24,7 @@ ul {
     justify-content: center;
 }
 
-li {
+li.menu {
     display: inline-block;
     margin: 20px;
     font-size: larger;
@@ -59,4 +60,9 @@ form#pomiar {
 
 label {
     margin: 10px;
+}
+
+div.user {
+    display: flex;
+    background: black;
 }

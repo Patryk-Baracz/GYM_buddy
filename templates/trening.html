@@ -9,15 +9,65 @@
     <header>
         <h1><a href="index.html">GYM-buddy</a></h1>
         <nav>
-            <ul>
-                <li><a href="pomiar.html">Pomiar Użytkownika</a></li>
-                <li><a href="plan.html">Plan Treningowy</a></li>
-                <li><a href="trening.html">Trening</a></li>
+            <ul class="menu">
+                <li class="menu"><a href="pomiar.html">Pomiar Użytkownika</a></li>
+                <li class="menu"><a href="plan.html">Plan Treningowy</a></li>
+                <li class="menu"><a href="trening.html">Trening</a></li>
             </ul>
         </nav>
     </header>
     <section>
-
+        <div class="user">
+            <form method="post">
+                <select name="user">
+                    {% for user in users %}
+                    <option value="{% user.nick %}">{% user.nick %}</option>
+                    {% endfor %}
+                </select>
+                <ul>
+                {% for exercise in training %}
+                    <li>
+                            <label>powtórzenia: <input type="number" name="exercise_1_reps"></label>
+                            <label>dodatkowy ciężar: <input type="number" step="0.5" name="exercise_1_weight_add"></label>
+                            <label><input type="submit" value="OK"></label>
+                    </li>
+                {% endfor %}
+            </ul>
+                </form>
+        </div>
+        <div class="training">
+            <form method="post">
+                <select name="training">
+                    <option value="trening_1">trening 1 </option>
+                    <option value="trening_2">trening 2 </option>
+                    <option value="trening_3">trening 3 </option>
+                </select>
+                <ul>
+                        <li>
+                        {% for exercise in training %}
+                        {% endfor %}
+                        </li>
+                </ul>
+            </form>
+        </div>
+           <div class="user">
+            <form method="post">
+                <select name="user">
+                    {% for user in users %}
+                    <option value="{% user.nick %}">{% user.nick %}</option>
+                    {% endfor %}
+                </select>
+                <ul>
+                {% for exercise in training %}
+                    <li>
+                            <label>powtórzenia: <input type="number" name="exercise_1_reps"></label>
+                            <label>dodatkowy ciężar: <input type="number" step="0.5" name="exercise_1_weight_add"></label>
+                            <label><input type="submit" value="OK"></label>
+                    </li>
+                {% endfor %}
+            </ul>
+                </form>
+        </div>
     </section>
     <footer>
 
